@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="CubicAtom"
+config/name_localized={
+"en": "CubicAtom",
+"zh_CN": "蜉蝣天方（暂定）",
+"zh_HK": "蜉蝣天方（暫定）",
+"zh_MO": "蜉蝣天方（暫定）",
+"zh_SG": "蜉蝣天方（暂定）",
+"zh_TW": "蜉蝣天方（暫定）"
+}
+run/main_scene="uid://cxldaf51p32qv"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="CubicAtom"
+
+[internationalization]
+
+locale/language_filter=["zh"]
+locale/country_filter=["HK", "MO", "TW"]
+
+[rendering]
+
+renderer/rendering_method="mobile"
