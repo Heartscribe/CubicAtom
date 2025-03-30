@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxldaf51p32qv"]
+
+[ext_resource type="FontFile" uid="uid://ddrwo4yvy1baf" path="res://Program/Resources/Fonts/Unifont/unifont-16.0.01.otf" id="1_jx2wd"]
+
+[node name="Main_Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_jx2wd")
+theme_override_font_sizes/font_size = 150
+text = "CubicAtom"
+horizontal_alignment = 1
