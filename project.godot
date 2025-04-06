@@ -23,6 +23,11 @@ run/main_scene="uid://cxldaf51p32qv"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
+
 [dotnet]
 
 project/assembly_name="CubicAtom"
