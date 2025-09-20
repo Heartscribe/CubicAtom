@@ -1,5 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxldaf51p32qv"]
+[gd_scene load_steps=4 format=3 uid="uid://cxldaf51p32qv"]
 
+[ext_resource type="Script" uid="uid://k0edc4gv03tw" path="res://Program/Pages/Main_Page/main_page.gd" id="1_4gk2d"]
+[ext_resource type="Texture2D" uid="uid://kgbnf48er7ug" path="res://Program/Resources/Images/MainPagebg.png" id="1_bg"]
 [ext_resource type="FontFile" uid="uid://ddrwo4yvy1baf" path="res://Program/Resources/Fonts/Unifont/unifont-16.0.01.otf" id="1_jx2wd"]
 
 [node name="Main_Page" type="Control"]
@@ -9,8 +11,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4gk2d")
 
-[node name="Label" type="Label" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.3
+offset_left = -115.2
+offset_top = -64.8
+offset_bottom = 453.6
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Background"]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
@@ -18,3 +35,33 @@ theme_override_fonts/font = ExtResource("1_jx2wd")
 theme_override_font_sizes/font_size = 150
 text = "CubicAtom"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Label"]
+layout_mode = 0
+anchor_left = 0.4
+anchor_top = 0.7
+anchor_right = 0.6
+anchor_bottom = 0.95
+alignment = 1
+
+[node name="StartButton" type="Button" parent="Background/Label/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jx2wd")
+text = "开始"
+
+[node name="SettingsButton" type="Button" parent="Background/Label/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jx2wd")
+text = "设置"
+
+[node name="QuitButton" type="Button" parent="Background/Label/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jx2wd")
+text = "退出"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+mode = 3
+unresizable = true
+borderless = true
+always_on_top = true
+dialog_text = "确定要退出程序吗？"
